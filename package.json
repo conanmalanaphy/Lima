@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "now dev",
     "build": "next build",
-    "start": "NODE_PATH=. NODE_ENV=production node server.js"
+    "start": "next start"
   },
   "author": "",
   "license": "ISC",

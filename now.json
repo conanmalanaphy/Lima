@@ -1,0 +1,9 @@
+{
+	"version":2,
+	"name":"lima",
+	"alias":"lima",
+	"builds":[{
+		"src":"package.json",
+		"use":"@now/next"
+	}]
+}
