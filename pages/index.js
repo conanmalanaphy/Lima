@@ -3,7 +3,7 @@ import Navigation from '../components/Navigation'
 import { Fragment } from 'react'
 import client from '../components/ApolloClient';
 import gql from 'graphql-tag';
-
+import Product from '../components/Product'
 /**
  * GraphQL products query.
  */
@@ -29,7 +29,7 @@ const PRODUCTS_QUERY = gql`query {
 const Index = ( props ) => {
 
 	const { products } = props;
-console.log(products)
+	console.log(products)
 	return (
 		
 		<Fragment>
@@ -42,16 +42,8 @@ console.log(products)
     </Head>
     <h1>Your new server-side rendered React.js app!</h1>
     { products.length ? (
-					products.map( product => {return (<div key={product.id}>
-          <h1>
-            {product.name}
-                </h1>
-                <h2>
-            {product.description}
-                </h2>
-              <img src={product.image.sourceUrl} />
-          </div>)} )
-				) : ''}
+					products.map( product => <Product key={product.id} product={product} />
+				)) : ''}
   </Fragment>
 	)
 };

@@ -27,7 +27,7 @@ export default class extends Component {
         {
             this.props.posts.map( post => {
               return (
-                <li key={ post.id  }>
+                <li key={ post.productId  }>
                 <Link href={ `/posts/${ post.id }` }>
                     <a href={ `/posts/${ post.id }` }>
                         { post.name}
