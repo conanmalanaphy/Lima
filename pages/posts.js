@@ -8,6 +8,8 @@ import gql from 'graphql-tag';
 
 import Product from '../components/Product'
 
+import { Input } from 'antd';
+import 'antd/dist/antd.css';
 /**
  * GraphQL products query.
  */
@@ -37,8 +39,16 @@ const AllPosts = withRouter(props => {
 
   return (
     <Fragment>
-      <Navigation/>
-      <h1>Our Posts Page!</h1>
+      <div style={ {   display: 'flex', flexDirection:"row", justifyContent: "flex-start"}}>
+        <div >
+        <img src="/static/Logo.png" alt="Alternative Text" />
+          </div>
+          <div style={ {   width: "600px", paddingLeft:"100px", paddingTop:"27px"}}>
+          <Input placeholder="Basic usage" />
+          </div>
+        </div>
+      <Navigation itemSelected="posts"/>
+      <h1>All the Items we have</h1>
       { products.length ? (
 						products.map( product => <Product key={product.id} product={product} />
 					)) : ''}

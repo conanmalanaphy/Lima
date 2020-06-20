@@ -45,21 +45,27 @@ const Index = ( props ) => {
 		
 		<Fragment>
 			<Head>
-				<title>This is our page title!</title>
+				<title>Entorno</title>
 				<meta name="description" content="This is an example of a meta description. This will show up in search results." />
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			</Head>
 			
 			<div>
-			
-			<img src="/static/Logo.png" alt="Alternative Text" />
-			<Input placeholder="Basic usage" />
+			 
+			<div style={ {   display: 'flex', flexDirection:"row", justifyContent: "flex-start"}}>
+        <div >
+        <img src="/static/Logo.png" alt="Alternative Text" />
+          </div>
+          <div style={ {   width: "600px", paddingLeft:"100px", paddingTop:"27px"}}>
+          <Input placeholder="Basic usage" />
+          </div>
+        </div>
 			</div>
-			<Navigation/>
+			<Navigation itemSelected='home'/>
 			<div>
 				<div>
-					text
+					Spinning Image shizz
 				</div>
 			</div>
   </Fragment>

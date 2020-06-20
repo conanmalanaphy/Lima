@@ -6,10 +6,12 @@ import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/ico
 const { SubMenu } = Menu;
 
 
-export default () => {
-    const [menuItem, setMenuItem] = useState('home');
+export default (props) => {
+    const [menuItem, setMenuItem] = useState(props.itemSelected);
 
     return(
+        <div style={ {   display: 'flex', flexDirection:"row", justifyContent: "center"}}>
+        
         <Menu onClick={(menuItem)=>{setMenuItem(menuItem)}} selectedKeys={[menuItem]} mode="horizontal">
         <Menu.Item key="home" icon={<MailOutlined />}>
             <Link href="/"><a href="/">Home</a></Link>
@@ -17,21 +19,22 @@ export default () => {
         <Menu.Item key="posts"  icon={<AppstoreOutlined />}>
         <Link href="/posts"><a href="/posts">Posts</a></Link>
         </Menu.Item>
-        <SubMenu icon={<SettingOutlined />} title="Navigation Three - Submenu">
-        <Menu.ItemGroup title="Item 1">
-            <Menu.Item key="setting:1">Option 1</Menu.Item>
-            <Menu.Item key="setting:2">Option 2</Menu.Item>
+        <SubMenu icon={<SettingOutlined />} title="Catagories">
+        <Menu.ItemGroup title="Jewelery">
+            <Menu.Item key="setting:1">Necklaces</Menu.Item>
+            <Menu.Item key="setting:2">Bracelets</Menu.Item>
         </Menu.ItemGroup>
-        <Menu.ItemGroup title="Item 2">
-            <Menu.Item key="setting:3">Option 3</Menu.Item>
-            <Menu.Item key="setting:4">Option 4</Menu.Item>
+        <Menu.ItemGroup title="Food">
+            <Menu.Item key="setting:3">Yummy</Menu.Item>
+            <Menu.Item key="setting:4">Tasty</Menu.Item>
         </Menu.ItemGroup>
         </SubMenu>
         <Menu.Item key="alipay">
         <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-            Navigation Four - Link
+           Vendors
         </a>
         </Menu.Item>
     </Menu>
+    </div>
   )
 }
