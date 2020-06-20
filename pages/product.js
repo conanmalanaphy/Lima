@@ -18,17 +18,14 @@ const Product = withRouter(props => {
 
 Product.getInitialProps = async function(context){
   let {query:{slug}} = context;
-  console.log(id)
   const id = slug ? slug.split('-').pop() :context.query.id;
 
-  //console.log(id)
   const PRODUCTS_QUERY = gql`query Product($id: ID!) {
     product(id: $id){
       id
       name
     }
     }`;
-//var id = "cHJvZHVjdDo2NDI="
   const res = await client.query(({
     query:PRODUCTS_QUERY,
     variables:{ id: id }

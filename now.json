@@ -10,6 +10,10 @@
 		{
 			"src":"/products/(?<slug>[^/]+)$",
 			"dest":"/products?slug=$slug"
+		},
+		{
+			"src":"/catagory/(?<catagory>[^/]+)$",
+			"dest":"/catagory?catagory=$catagory"
 		}
 	]
 }

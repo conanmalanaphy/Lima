@@ -4,6 +4,12 @@ import { Fragment } from 'react'
 import client from '../components/ApolloClient';
 import gql from 'graphql-tag';
 import Product from '../components/Product'
+import Link from 'next/link'
+
+import { Input } from 'antd';
+import 'antd/dist/antd.css';
+import React, { useState } from 'react'
+
 /**
  * GraphQL products query.
  */
@@ -22,6 +28,12 @@ const PRODUCTS_QUERY = gql`query {
 								sourceUrl
 							}
 							name
+							productCategories {
+								nodes {
+								  id
+								  name
+								}
+							  }
 						}
 					}
 				}`;
@@ -29,21 +41,27 @@ const PRODUCTS_QUERY = gql`query {
 const Index = ( props ) => {
 
 	const { products } = props;
-	console.log(products)
 	return (
 		
 		<Fragment>
-    <Navigation/>
-    <Head>
-      <title>This is our page title!</title>
-      <meta name="description" content="This is an example of a meta description. This will show up in search results." />
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <h1>Your new server-side rendered React.js app!</h1>
-    { products.length ? (
-					products.map( product => <Product key={product.id} product={product} />
-				)) : ''}
+			<Head>
+				<title>This is our page title!</title>
+				<meta name="description" content="This is an example of a meta description. This will show up in search results." />
+				<meta charSet="utf-8" />
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+			</Head>
+			
+			<div>
+			
+			<img src="/static/Logo.png" alt="Alternative Text" />
+			<Input placeholder="Basic usage" />
+			</div>
+			<Navigation/>
+			<div>
+				<div>
+					text
+				</div>
+			</div>
   </Fragment>
 	)
 };
@@ -61,3 +79,9 @@ Index.getInitialProps = async () => {
 };
 
 export default Index;
+
+/*<Link as={`/catagory/${product.productCategories.id}`} href={`/catagory?catagory=${product.productCategories.id}`}>
+						<a>
+							Candles
+						</a>
+					</Link> */
