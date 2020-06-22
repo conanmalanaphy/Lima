@@ -10,9 +10,6 @@ const HeaderComponent = ( itemSelected) =>{
 	return (
 		<Header className='header-component'>
 			<div className='header-container'>
-				<div>
-					<img src="/static/Logo.png" alt="Alternative Text" />
-				</div>
 				<Navigation itemSelected={itemSelected}/>
 			</div>
 		</Header>

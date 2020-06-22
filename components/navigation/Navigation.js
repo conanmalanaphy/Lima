@@ -13,42 +13,49 @@ export default (props) => {
     return(
         <div className='navigation-container'>
             <Menu onClick={(menuItem)=>{setMenuItem(menuItem)}} selectedKeys={[menuItem]} mode="horizontal" theme="light">
-            <Menu.Item key="home" icon={<MailOutlined />}>
-                <Link href="/"><a href="/">Home</a></Link>
-            </Menu.Item>
-            <Menu.Item key="posts"  icon={<AppstoreOutlined />}>
-                <Link href="/posts"><a href="/posts">Posts</a></Link>
-            </Menu.Item>
-            <SubMenu icon={<SettingOutlined />} title="Catagories">
-                <Menu.ItemGroup title="Jewelery">
-                    <Menu.Item key="setting:1">
-                        <Link as={`/catagory/?catagory="dGVybTo0"`} href={`/catagory/?catagory="dGVybTo0"`} prefetch>
-                            <a>
-                                Necklaces
-                            </a>
-                        </Link>
-                    </Menu.Item>
-                    <Menu.Item key="setting:2">
-                        <Link as={`/catagory/?catagory="dGVybTo0"`} href={`/catagory/?catagory="dGVybTo0"`} prefetch>
-                            <a>
-                                Bracelets
-                            </a>
-                        </Link>
-                    </Menu.Item>
-                </Menu.ItemGroup>
-                <Menu.ItemGroup title="Food">
-                    <Menu.Item key="setting:3">Yummy</Menu.Item>
-                    <Menu.Item key="setting:4">Tasty</Menu.Item>
-                </Menu.ItemGroup>
-            </SubMenu>
-            <Menu.Item key="stores">
+                <Menu.Item key="homelogo" >
+                    <Link href="/">
+                        <a href="/">
+                            <img src="/static/Logo.png" alt="Alternative Text" />
+                        </a>
+                    </Link>
+                </Menu.Item>
+                <Menu.Item key="home">
+                    <Link href="/"><a href="/">Home</a></Link>
+                </Menu.Item>
+                <Menu.Item key="stores"  title="Stores">
                     <Link as={`/stores/napoleon`} href={`/stores?store="napoleon"`}>
                             <a>
-                             Napoleon
+                                Stores
                             </a>
                     </Link>
-            </Menu.Item>
-        </Menu>
-    </div>
-  )
+                </Menu.Item>
+                <SubMenu title="Catagories">
+                    <Menu.ItemGroup title="Jewelery">
+                        <Menu.Item key="setting:1">
+                            <Link as={`/catagory/?catagory="dGVybTo0"`} href={`/catagory/?catagory="dGVybTo0"`} prefetch>
+                                <a>
+                                    Necklaces
+                                </a>
+                            </Link>
+                        </Menu.Item>
+                        <Menu.Item key="setting:2">
+                            <Link as={`/catagory/?catagory="dGVybTo0"`} href={`/catagory/?catagory="dGVybTo0"`} prefetch>
+                                <a>
+                                    Bracelets
+                                </a>
+                            </Link>
+                        </Menu.Item>
+                    </Menu.ItemGroup>
+                    <Menu.ItemGroup title="Food">
+                        <Menu.Item key="setting:3">Yummy</Menu.Item>
+                        <Menu.Item key="setting:4">Tasty</Menu.Item>
+                    </Menu.ItemGroup>
+                </SubMenu>
+                <Menu.Item key="posts">
+                    <Link href="/posts"><a href="/posts">About Us</a></Link>
+                </Menu.Item>
+            </Menu>
+        </div>
+    )
 }

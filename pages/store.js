@@ -49,7 +49,7 @@ const Store = withRouter(props => {
   )
 });
 
-AllPosts.getInitialProps = async function(){
+Store.getInitialProps = async function(){
 
   
   const result = await client.query(({
@@ -60,4 +60,4 @@ AllPosts.getInitialProps = async function(){
   return {products:result.data.products.nodes} 
 };
 
-export default AllPosts;
+export default Store;

@@ -50,38 +50,27 @@ const AllPosts = withRouter(props => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Layout>
-         <HeaderComponent itemSelected='stores' />
-        <Content style={{ padding: '80px 50px' }}>
-      ``  <Breadcrumb style={{ margin: '16px 0' }}>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
+        <HeaderComponent itemSelected='stores' />
+        <Content style={{ padding: '110px 50px', marginLeft:"50px", marginRight:"50px" }}>
+          <Breadcrumb style={{ margin: '16px 0' }}>
+            <Breadcrumb.Item> 
+              <Link as={`/`} href={`/`}>
+                <a>
+                   Home
+                </a>
+              </Link>
+            </Breadcrumb.Item>
             <Breadcrumb.Item>{catagoryName}</Breadcrumb.Item>
           </Breadcrumb>
-          <Layout className="site-layout" style={{ padding: '24px 0' }}>
+          <Layout className="site-layout" style={{ padding: '24px 0', background:"white" }}>
             <Sider className="site-layout-background" width={200}>
-              <Menu
-                mode="inline"
-                defaultSelectedKeys={['1']}
-                defaultOpenKeys={['sub1']}
-                style={{ height: '100%' }}
-              >
-                <SubMenu key="sub1" icon={<UserOutlined />} title="Speical Offers">
-                  <Menu.Item key="1">Free Delivery</Menu.Item>
-                  <Menu.Item key="2">On sale</Menu.Item>
-                </SubMenu>
-                <SubMenu key="sub2" icon={<LaptopOutlined />} title="Price">
-                  <Menu.Item key="5">Any Price</Menu.Item>
-                  <Menu.Item key="6">Under £20</Menu.Item>
-                  <Menu.Item key="7">£20 - £50</Menu.Item>
-                  <Menu.Item key="8">Custom</Menu.Item>
-                </SubMenu>
-                <SubMenu key="sub3" icon={<NotificationOutlined />} title="Colour">
-                  <Menu.Item key="9">Black</Menu.Item>
-                  <Menu.Item key="10">Blue</Menu.Item>
-                  <Menu.Item key="11">Purple</Menu.Item>
-                </SubMenu>
-              </Menu>
+             <div> 
+              <h1>{catagoryName}</h1>
+              <h5> Price </h5>
+
+             </div>
             </Sider>
-            <Content style={{ padding: '0 24px', minHeight: 280 }}> <h1>All the Items we for {catagoryName}</h1>
+            <Content style={{ padding: '0 24px', minHeight: 280 }}> 
               <main className="main-area">
                 <div style={{margin: '0 auto', padding: '0 1em'}}>
                   <section style={{display: 'flex', flexWrap: 'wrap'}}>

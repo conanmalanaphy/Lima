@@ -41,7 +41,12 @@ img {
  }
 
 .card {
-    flex: 1 0 500px;
+    flex: 1 0 300px;
     box-sizing: border-box;
     margin: 1rem .25em;
+}
+
+img.resize {
+  width: 200px;
+  height: 200px;
 }

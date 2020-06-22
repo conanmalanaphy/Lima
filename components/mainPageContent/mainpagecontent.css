@@ -1,5 +1,22 @@
-.site-layout-background{
+.site-layout-background {
     background-color: white;
-    padding: 24;
+    padding: 60;
     min-height: 380;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('/static/splashbackground.png');
+
+  /* Full height */
+  height: 120vh; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: -101px;
+  margin-right: -99px;
+  margin-top: -7px;
 }
