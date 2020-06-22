@@ -33,14 +33,14 @@ export default (props) => {
                 <SubMenu title="Catagories">
                     <Menu.ItemGroup title="Jewelery">
                         <Menu.Item key="setting:1">
-                            <Link as={`/catagory/?catagory="dGVybTo0"`} href={`/catagory/?catagory="dGVybTo0"`} prefetch>
+                            <Link as={`/catagory/?catagory="dGVybTo0"`} href={`/catagory/?catagory="dGVybTo0"`} >
                                 <a>
                                     Necklaces
                                 </a>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="setting:2">
-                            <Link as={`/catagory/?catagory="dGVybTo0"`} href={`/catagory/?catagory="dGVybTo0"`} prefetch>
+                            <Link as={`/catagory/?catagory="dGVybTo0"`} href={`/catagory/?catagory="dGVybTo0"`} >
                                 <a>
                                     Bracelets
                                 </a>

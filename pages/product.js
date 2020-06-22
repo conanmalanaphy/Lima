@@ -26,13 +26,25 @@ const Product = withRouter(props => {
         <HeaderComponent itemSelected='stores' />
         <Content style={{ padding: '105px 50px' }}>
         <Breadcrumb style={{ margin: '16px 0' }}>
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>Catagory Name</Breadcrumb.Item>
+          <Breadcrumb.Item> 
+            <Link as={`/`} href={`/`}>
+                <a>
+                   Home
+                </a>
+            </Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>
+            <Link as={`/catagory/?catagory=${product.productCategories.nodes[0].id}`} href={`/catagory/?catagory=${product.productCategories.nodes[0].id}`} >
+                  <a>
+                  {product.productCategories.nodes[0].name}
+                  </a>
+              </Link>
+          </Breadcrumb.Item>
           <Breadcrumb.Item>{product.name}</Breadcrumb.Item>
         </Breadcrumb>
         <Layout className="site-layout" style={{ padding: '24px 0' }}>
           <Content style={{ padding: '0 24px', minHeight: 280 }}> 
-            <main class="main-area">
+            <main className="main-area">
               <div style={{margin: '0 auto', padding: '0 1em'}}>
                 <section style={{display: 'flex', flexWrap: 'wrap'}}>
                 {product ? (
@@ -71,6 +83,12 @@ Product.getInitialProps = async function(context){
       description
       image {
         sourceUrl
+      }
+      productCategories {
+        nodes {
+          name
+          id
+        }
       }
     }
     }`;
