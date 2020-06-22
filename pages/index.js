@@ -1,12 +1,11 @@
 import Head from 'next/head'
-import Navigation from '../components/Navigation'
-import MainPageContent from '../components/MainPageContent'
+import MainPageContent from '../components/mainPageContent/MainPageContent'
 import { Fragment } from 'react'
 import client from '../components/ApolloClient';
 import gql from 'graphql-tag';
-import Product from '../components/Product'
+import Product from '../components/product/Product'
 import Link from 'next/link'
-import HeaderComponent from '../components/Header';
+import HeaderComponent from '../components/navigation/Header';
 
 import { Input,Layout, Menu, Breadcrumb } from 'antd';
 import 'antd/dist/antd.css';

@@ -1,14 +1,13 @@
-import Navigation from '../components/Navigation'
 import React, { Component, Fragment } from 'react'
 import Link from 'next/link'
 import clientConfig from '../client-config'
 import {withRouter} from 'next/router'
 import client from '../components/ApolloClient';
 import gql from 'graphql-tag';
-import HeaderComponent from '../components/Header';
+import HeaderComponent from '../components/navigation/Header';
 
 
-import Product from '../components/Product'
+import Product from '../components/product/Product'
 
 import { Input } from 'antd';
 import 'antd/dist/antd.css';

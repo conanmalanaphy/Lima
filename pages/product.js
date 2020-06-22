@@ -1,9 +1,8 @@
 import {withRouter} from 'next/router'
 import client from '../components/ApolloClient';
 import gql from 'graphql-tag';
-import HeaderComponent from '../components/Header';
+import HeaderComponent from '../components/navigation/Header';
 
-import Navigation from '../components/Navigation'
 import React, { Component, Fragment } from 'react'
 import Link from 'next/link'
 
