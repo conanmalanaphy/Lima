@@ -1,18 +1,22 @@
 import Link from 'next/link'
-
+import './product.css'
 const Product = (props) => {
     const {product} = props;
 
     return (
-            <div>
-                <h3>{product.name}</h3>
-
-                <Link as={`/product/${product.slug}-${product.id}`} href={`/product?slug=${product.slug}-${product.id}`}>
-                    <a>
-                       <img src={product.image.sourceUrl} />
-                    </a>
-                </Link>
-            </div>
+        <article class="card">
+            <Link as={`/product/${product.slug}-${product.id}`} href={`/product?slug=${product.slug}-${product.id}`}>
+                <a>
+                    <picture class="thumbnail">
+                        <img src={product.image.sourceUrl} alt="A banana that looks like a bird" />
+                    </picture>
+                    <div class="card-content">
+                        <h2>{product.name}</h2>
+                        <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis but market-facing.</p>
+                    </div>
+                </a>
+            </Link>
+        </article>
     )
 
 }

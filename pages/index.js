@@ -54,16 +54,16 @@ const Index = ( props ) => {
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			</Head>
 			<Layout>
-			<HeaderComponent itemSelected='home' />
-			<Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
-				<Breadcrumb style={{ margin: '16px 0' }}>
-					<Breadcrumb.Item>Home</Breadcrumb.Item>
-				</Breadcrumb>
-				<MainPageContent />
-			</Content>
-			<Footer style={{ textAlign: 'center' }}>Entorno in Lima </Footer>
-		</Layout>		
-  </Fragment>
+				<HeaderComponent itemSelected='home' />
+				<Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
+					<Breadcrumb style={{ margin: '16px 0' }}>
+						<Breadcrumb.Item>Home</Breadcrumb.Item>
+					</Breadcrumb>
+					<MainPageContent />
+				</Content>
+				<Footer style={{ textAlign: 'center' }}>Entorno in Lima </Footer>
+			</Layout>		
+ 		</Fragment>
 	)
 };
 

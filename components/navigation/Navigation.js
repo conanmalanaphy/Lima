@@ -41,10 +41,12 @@ export default (props) => {
                     <Menu.Item key="setting:4">Tasty</Menu.Item>
                 </Menu.ItemGroup>
             </SubMenu>
-            <Menu.Item key="alipay">
-                <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-                    Vendors
-                </a>
+            <Menu.Item key="stores">
+                    <Link as={`/stores/napoleon`} href={`/stores?store="napoleon"`}>
+                            <a>
+                             Napoleon
+                            </a>
+                    </Link>
             </Menu.Item>
         </Menu>
     </div>
