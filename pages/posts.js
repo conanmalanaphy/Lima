@@ -5,6 +5,8 @@ import clientConfig from '../client-config'
 import {withRouter} from 'next/router'
 import client from '../components/ApolloClient';
 import gql from 'graphql-tag';
+import HeaderComponent from '../components/Header';
+
 
 import Product from '../components/Product'
 
@@ -39,15 +41,7 @@ const AllPosts = withRouter(props => {
 
   return (
     <Fragment>
-      <div style={ {   display: 'flex', flexDirection:"row", justifyContent: "flex-start"}}>
-        <div >
-        <img src="/static/Logo.png" alt="Alternative Text" />
-          </div>
-          <div style={ {   width: "600px", paddingLeft:"100px", paddingTop:"27px"}}>
-          <Input placeholder="Basic usage" />
-          </div>
-        </div>
-      <Navigation itemSelected="posts"/>
+      <HeaderComponent itemSelected='posts' />
       <h1>All the Items we have</h1>
       { products.length ? (
 						products.map( product => <Product key={product.id} product={product} />

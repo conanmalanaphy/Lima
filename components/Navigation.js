@@ -12,7 +12,7 @@ export default (props) => {
     return(
         <div style={ {   display: 'flex', flexDirection:"row", justifyContent: "center"}}>
         
-        <Menu onClick={(menuItem)=>{setMenuItem(menuItem)}} selectedKeys={[menuItem]} mode="horizontal">
+        <Menu onClick={(menuItem)=>{setMenuItem(menuItem)}} selectedKeys={[menuItem]} mode="horizontal" theme="light">
         <Menu.Item key="home" icon={<MailOutlined />}>
             <Link href="/"><a href="/">Home</a></Link>
         </Menu.Item>
@@ -21,8 +21,20 @@ export default (props) => {
         </Menu.Item>
         <SubMenu icon={<SettingOutlined />} title="Catagories">
         <Menu.ItemGroup title="Jewelery">
-            <Menu.Item key="setting:1">Necklaces</Menu.Item>
-            <Menu.Item key="setting:2">Bracelets</Menu.Item>
+            <Menu.Item key="setting:1">
+            <Link as={`/catagory/Food`} href={`/catagory?catagory="dGVybTo0"`}>
+							<a>
+                            Necklaces
+							</a>
+						</Link>
+            </Menu.Item>
+            <Menu.Item key="setting:2">
+            <Link as={`/catagory/Food`} href={`/catagory?catagory="dGVybTo0"`}>
+							<a>
+                            Bracelets
+							</a>
+						</Link>
+                        </Menu.Item>
         </Menu.ItemGroup>
         <Menu.ItemGroup title="Food">
             <Menu.Item key="setting:3">Yummy</Menu.Item>

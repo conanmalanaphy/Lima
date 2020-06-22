@@ -22,7 +22,7 @@ export default class extends Component {
   render() {
     return (
       <Fragment>
-        <Navigation/>
+        <HeaderComponent itemSelected='posts' />
         <h1>{ this.props.post.name }</h1>
         <article
           className="entry-content"
