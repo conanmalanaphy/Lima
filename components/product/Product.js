@@ -5,14 +5,14 @@ const Product = (props) => {
 
     return (
         <article class="card">
-            <Link as={`/product/${product.slug}-${product.id}`} href={`/product?slug=${product.slug}-${product.id}`}>
+            <Link as={`/product?slug=${product.slug}-${product.id}`} href={`/product?slug=${product.slug}-${product.id}`}>
                 <a>
                     <picture class="thumbnail">
                         <img src={product.image.sourceUrl} alt="A banana that looks like a bird" />
                     </picture>
                     <div class="card-content">
                         <h2>{product.name}</h2>
-                        <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis but market-facing.</p>
+                        <p>TUX re-inventing the wheel, and move the needle. creep dogpile that but diversify kpis but market-facing.</p>
                     </div>
                 </a>
             </Link>

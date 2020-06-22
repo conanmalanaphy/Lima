@@ -82,7 +82,7 @@ const AllPosts = withRouter(props => {
               </Menu>
             </Sider>
             <Content style={{ padding: '0 24px', minHeight: 280 }}> <h1>All the Items we for {catagoryName}</h1>
-              <main class="main-area">
+              <main className="main-area">
                 <div style={{margin: '0 auto', padding: '0 1em'}}>
                   <section style={{display: 'flex', flexWrap: 'wrap'}}>
                     { prods.length ? (

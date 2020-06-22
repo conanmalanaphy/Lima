@@ -22,14 +22,14 @@ export default (props) => {
             <SubMenu icon={<SettingOutlined />} title="Catagories">
                 <Menu.ItemGroup title="Jewelery">
                     <Menu.Item key="setting:1">
-                        <Link as={`/catagory/Food`} href={`/catagory?catagory="dGVybTo0"`}>
+                        <Link as={`/catagory/?catagory="dGVybTo0"`} href={`/catagory/?catagory="dGVybTo0"`} prefetch>
                             <a>
                                 Necklaces
                             </a>
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="setting:2">
-                        <Link as={`/catagory/Food`} href={`/catagory?catagory="dGVybTo0"`}>
+                        <Link as={`/catagory/?catagory="dGVybTo0"`} href={`/catagory/?catagory="dGVybTo0"`} prefetch>
                             <a>
                                 Bracelets
                             </a>
